@@ -1,7 +1,6 @@
-# storywithafriend
-Story with a Friend
+# Story with a Friend
 
-Pass back and forth and write funny stories with a friend!
+Pass back-and-forth and write funny stories with a friend!
 
 <https://storywithafriend.github.io/>
 

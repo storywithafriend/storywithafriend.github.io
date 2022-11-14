@@ -1,0 +1,81 @@
+body {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    background-color: white;
+	min-width: 480px;
+	width: 480px;
+	margin: auto;
+}
+
+h1 {
+	text-align: center;
+    font-size: 30px;
+}
+
+input {
+    height: 32px;
+    width: 100%;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.display {
+    width: 100%;
+    min-height: 30px;
+    padding-bottom: 12px;
+    border-spacing: 0 4px;
+}
+
+.display-title {
+    width: 100%;
+    min-height: 30px;
+    padding-bottom: 0px;
+    border-spacing: 0 0px;
+    margin-bottom: 0px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.storyline {
+    height: 36px;
+    max-height: 36px;
+    background-color: #FFFFFF;
+    border: 2px solid;
+    border-color: #cccccc;
+    overflow: auto;
+}
+
+.submit {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+.submit-input {
+    font-size: 16px;
+    width: 91%;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+.submit-botton {
+    font-size: 14px;
+    position: absolute;
+    right: 3px; 
+    top: 3px;
+    bottom: 3px;
+    border: 0;
+    background: #50C878;
+    color: white;
+    outline: none;
+    margin: 0;
+    padding: 0 10px;
+    border-radius: 100px;
+    z-index: 2;
+}
