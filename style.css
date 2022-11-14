@@ -4,7 +4,8 @@ body {
 	max-width: 480px;
 	width: device-width;
 	margin: auto;
-	padding: 2px
+	padding-left: 4px;
+	padding-right: 4px;
 }
 
 h1 {
