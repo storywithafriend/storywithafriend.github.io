@@ -29,15 +29,15 @@
 		<table class="display-title">
 			<tbody>
             <tr>
-				<td><i class="fa fa-question-circle" style="font-size:32px;color:#cccccc" id="help"></i></td>
+				<td><i class="fa fa-question-circle" style="font-size:32px;color:#cccccc" id="help-button"></i></td>
 		        <td><h1>Story With A Friend</h1></td>
-		        <td><i class="fa fa-gear" style="font-size:32px;color:#cccccc" id="settings"></i></td>
+		        <td><i class="fa fa-gear" style="font-size:32px;color:#cccccc" id="settings-button"></i></td>
             </tr>
             </tbody>
         </table>
         
 		<hr>
-		<br><br><br>
+		<br><br>
          
          <div class="container" id="container" >
 		 <table class="display">
@@ -77,8 +77,15 @@
         </div>
 		
 		<div class="submit">
-            <input type="text" class="submit-input" placeholder="write the next line in the story ...">
-            <button class="submit-botton" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>  
+            <input type="text" class="submit-input" id="submit-input" placeholder="write the next line in the story ...">
+            <button class="submit-botton" type="submit" id="submit-button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>  
+        </div>
+        
+        <div id="help-screen" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>XXXXXXX</p>
+          </div>
         </div>
 
         <script src="main.js"></script>
