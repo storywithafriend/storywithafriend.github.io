@@ -6,6 +6,8 @@
     var helpScreen = document.getElementById("help-screen");
     var settingsScreen = document.getElementById("settings-screen");  
     
+    var prompt = document.getElementById("prompt");
+    
     var s = [] 
     s[0] = document.getElementById("s0");
     s[1] = document.getElementById("s1");
@@ -36,11 +38,17 @@
 	}
 	
 	function showStory() {	
+		showPrompt();
 		var i;
 		for (i = 0; i < 10; i++) {
 			s[i].className = 'storyline'; 
 			s[i].value = story[i];
 	    }
+	}
+	
+	function showPrompt() {	
+		day = 
+		prompt.innerHTML = "Today's prompt: XXX"; //+ prompts[day];
 	}
 	
 	function reveal() {

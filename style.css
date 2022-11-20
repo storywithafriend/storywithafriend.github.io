@@ -18,11 +18,15 @@ textarea {
     width: 100%;
     max-width: device-width;
     line-height: 16px;
-	margin-bottom: 2px;
+	margin-bottom: 1px;
 	font-size: 16px;
     resize: none;
     overflow: hidden;
     transition: width 0.25s;
+}
+
+.prompt {
+  font-style: italic;
 }
 
 .display {
