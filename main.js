@@ -17,16 +17,12 @@
     s[7] = document.getElementById("s7");
     s[8] = document.getElementById("s8");
     s[9] = document.getElementById("s9");
-    
-    var player = document.getElementById("player");
      
-    var title = "Title"  
     var story = [];
     var line = 0;
 
     function addLine(msg) {
 		if (line < 10) story[line] = msg;
-		if (line == 10) title = msg;
 		line++;
 		updateGameState();
     }
@@ -36,7 +32,6 @@
 		line = 0;
 		var i;
 		for (i = 0; i < 10; i++) story[i] = "";
-		title = "";
 		showStory();	
 	}
 	
@@ -50,16 +45,12 @@
 	
 	function reveal() {
 		showStory();
-	    s[0].className = 'storylineactive1';
-	    s[1].className = 'storylineactive1';
-	    s[2].className = 'storylineactive2';
-	    s[3].className = 'storylineactive2';	
-	    s[4].className = 'storylineactive1';
-	    s[5].className = 'storylineactive1';
-	    s[6].className = 'storylineactive2';
-	    s[7].className = 'storylineactive2';
-	    s[8].className = 'storylineactive1';
-	    s[9].className = 'storylineactive1';
+		var i;
+		for (i = 0; i < 10; i++) {
+			var player = (Math.floor((i % 4)/2) + 1);
+			s[i].className = 'storylineactive1';
+			if(player==2) s[i].className = 'storylineactive2';
+		}
 		line++;
 		updateGameState();
 	}
@@ -74,6 +65,8 @@
 	 */
 	function updateGameState() {
 
+		var player = (Math.floor((line % 4)/2) + 1);
+
 		for (i = 0; i < 10; i++) {
 			s[i].disabled=true;
 			s[i].placeholder="";
@@ -84,7 +77,7 @@
 			for (i = 0; i < 10; i++) s[i].value="";
 			s[line].disabled=false; 
 			s[line].focus();
-			s[line].placeholder="write the next line of the story ...";
+			s[line].placeholder="Player "+player+", write the next line of the story ...";
 		}
 		
 		switch (line) {
@@ -171,86 +164,22 @@
     
 
     // Listen for enter in Input line
-	s[0].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[0].value);
-		}
-	});
-	
-	s[1].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[1].value);
-		}
-	});
- 
-	s[2].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[2].value);
-		}
-	});
+    var i;
+    for (i = 0; i < 10; i++) {
+		s[i].addEventListener('keypress', function (e) {
+			var event = e || window.event;
+			var char = event.which || event.keyCode;
+			if (char == '13') addLine(this.value);
+		});
+	}
 
-	s[3].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[3].value);
-		}
-	});
-	    
-	s[4].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[4].value);
-		}
-	});
-	    
-	s[5].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[5].value);
-		}
-	});
+    // resize input box as needed
+$('textarea').on({input: function(){
+    var totalHeight = $(this).prop('scrollHeight') - parseInt($(this).css('padding-top')) - parseInt($(this).css('padding-bottom'));
+    $(this).css({'height':totalHeight});
+}
+});
 
-	s[6].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[6].value);
-		}
-	}); 
- 
-	s[7].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[7].value);
-		}
-	});  
-
-	s[8].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[8].value);
-		}
-	}); 
-	
-	s[9].addEventListener('keypress', function (e) {
-		var event = e || window.event;
-		var char = event.which || event.keyCode;
-		if (char == '13') {
-			addLine(s[9].value);
-		}
-	}); 	
-    
     // Reveal Stories
     //revealButton.addEventListener('click', reveal);
     
