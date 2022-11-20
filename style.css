@@ -18,6 +18,7 @@ h1 {
 textarea {
     height: 36px;
     width: 100%;
+    max-width: device-width;
     line-height: 16px;
 	margin-bottom: 2px;
 	font-size: 16px;
