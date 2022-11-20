@@ -39,49 +39,57 @@
 		<hr>
 		<br><br>
          
-         <div class="container" id="container" >
-		 <table class="display">
+        <!-- Story -->
+        <div class="container" id="container" >
+		<table class="display">
 			<tbody> 
             <tr>
-                <td class="storyline" id="s0"> </td>
+                <input type="text" class="storyline" id="s0" placeholder=""> 
             </tr>
             <tr>
-                <td class="storyline" id="s1"> </td>
+                <input type="text" class="storyline" id="s1" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s2"> </td>
+                <input type="text" class="storyline" id="s2" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s3"> </td>
+                <input type="text" class="storyline" id="s3" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s4"> </td>
+                <input type="text" class="storyline" id="s4" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s5"> </td>
+                <input type="text" class="storyline" id="s5" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s6"> </td>
+                <input type="text" class="storyline" id="s6" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s7"> </td>
+                <input type="text" class="storyline" id="s7" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s8"> </td>
+                <input type="text" class="storyline" id="s8" placeholder="" disabled> 
             </tr>
             <tr>
-                <td class="storyline" id="s9"> </td>
+                <input type="text" class="storyline" id="s9" placeholder="" disabled> 
+            </tr> 
+            <tr>
+               <!-- XXX <div class="player1" id="player"> Player 1</div> -->       
             </tr> 
             </tbody>
         </table>
         </div>
 		
-		<div class="submit">
-            <input type="text" class="submit-input" id="submit-input" placeholder="write the next line in the story ...">
-            <button class="submit-botton" type="submit" id="submit-button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>  
+        <!-- Help Screen -->       
+        <div id="help-screen" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>XXXXXXX</p>
+          </div>
         </div>
         
-        <div id="help-screen" class="modal">
+        <!-- Settings Screen -->  
+        <div id="settings-screen" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
             <p>XXXXXXX</p>
@@ -89,7 +97,6 @@
         </div>
 
         <script src="main.js"></script>
-
 
     </body>
 </html>
