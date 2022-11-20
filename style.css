@@ -154,7 +154,7 @@ textarea {
 }
 
 .my-botton {
-	height: 36px;
+	height: 44px;
     font-size: 28px;
     border: 0;
     background: #50C878;
@@ -163,6 +163,7 @@ textarea {
     margin: 0;
     padding: 0 10px;
     border-radius: 100px;
+    visibility: hidden;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */

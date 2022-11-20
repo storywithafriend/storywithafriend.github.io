@@ -88,6 +88,9 @@
 
 		var player = (Math.floor((line % 4)/2) + 1);
 
+		newButton.style.visibility = 'hidden';
+		shareButton.style.visibility = 'hidden';
+
 		for (i = 0; i < 10; i++) {
 			s[i].disabled=true;
 			s[i].placeholder="";
@@ -168,6 +171,8 @@
 				break;
 			case 10:
 				reveal();
+				newButton.style.visibility = 'visible';
+				shareButton.style.visibility = 'visible';
 				break;
 		};
 			
