@@ -48,7 +48,7 @@
 	
 	function showPrompt() {	
 		day = 
-		prompt.innerHTML = "Today's prompt: XXX"; //+ prompts[day];
+		prompt.innerHTML = "Today's prompt: The elephant and the balloon"; //+ prompts[day];
 	}
 	
 	function reveal() {
