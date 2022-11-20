@@ -9,6 +9,8 @@
     var helpScreen = document.getElementById("help-screen");
     var settingsScreen = document.getElementById("settings-screen");  
     
+    var helpClose = document.getElementById("help-close");
+    
     var snackbar = document.getElementById("snackbar");
     
     var prompt = document.getElementById("prompt");
@@ -218,6 +220,14 @@
 			$(this).css({'height':totalHeight});
 		}
 	});
+	
+    // open/close help
+    helpButton.onclick = function() {
+      helpScreen.style.display = "block";
+    }
+    helpClose.onclick = function() {
+      helpScreen.style.display = "none";
+    }
 
     // Share screenshot button
     shareButton.addEventListener('click', takeScreenShot);
