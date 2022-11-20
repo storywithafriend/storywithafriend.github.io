@@ -175,7 +175,7 @@
 
     // resize input box as needed
 	$('textarea').on({input: function(){
-			var totalHeight = $(this).prop('scrollHeight') - parseInt($(this).css('padding-top')) - parseInt($(this).css('padding-bottom'));
+			var totalHeight = $(this).prop('scrollHeight') - parseInt($(this).css('padding-top')) - parseInt($(this).css('padding-bottom')) + 12;
 			$(this).css({'height':totalHeight});
 		}
 	});

@@ -41,57 +41,63 @@ textarea {
 }
 
 .storyline {
-    height: 36px;
-    max-height: 72px;
+    height: 40px;
+    max-height: 80px;
     background-color: #FFFFFF;
     border: 2px solid;
     border-color: #cccccc;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 .storylinenext1 {
-    height: 36px;
-    max-height: 72px;
+    height: 44px;
+    max-height: 80px;
     background-color: #FFFFFF;
     border: 4px solid;
     border-color: #50C878;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 .storylineactive1 {
-    height: 36px;
-    max-height: 72px;
+    height: 44px;
+    max-height: 80px;
     background-color: #C1E1C1;
     border: 2px solid;
     border-color: #C1E1C1;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 .storylinenext2 {
-    height: 36px;
-    max-height: 72px;
+    height: 44px;
+    max-height: 80px;
     background-color: #FFFFFF;
     border: 4px solid;
     border-color: #0000FF;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 .storylineactive2 {
-    height: 36px;
-    max-height: 72px;
+    height: 44px;
+    max-height: 80px;
     background-color: #ADD8E6;
     border: 2px solid;
     border-color: #ADD8E6;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 .storylinehidden {
-    height: 36px;
-    max-height: 72px;
+    height: 44px;
+    max-height: 80px;
     background-color: #cccccc;
     border: 2px solid;
     border-color: #cccccc;
     overflow: auto;
+    box-sizing: border-box;
 }
 
 .modal {
