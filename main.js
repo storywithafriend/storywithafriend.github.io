@@ -79,7 +79,7 @@
 	function showMessage(msg) {
 		snackbar.className = "show";
 		snackbar.innerHTML = msg;
-		setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+		setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1500);
 	}
 
 
@@ -117,6 +117,7 @@
 				s[1].className = 'storylinenext1';
 				break;
 			case 2:
+			    showMessage("Pass to Player 2");
 			    s[1].value = story[1];
 				s[0].className = 'storylinehidden';
 				s[1].className = 'storylineactive1';
@@ -130,6 +131,7 @@
 				s[3].className = 'storylinenext2';
 				break;
 			case 4:
+			    showMessage("Pass to Player 1");
 			    s[3].value = story[3];
 				s[1].className = 'storylinehidden';
 				s[2].className = 'storylinehidden';
@@ -144,6 +146,7 @@
 				s[5].className = 'storylinenext1';
 				break;
 			case 6:
+			    showMessage("Pass to Player 2");
 			    s[5].value = story[5];
 				s[3].className = 'storylinehidden';
 				s[4].className = 'storylinehidden';
@@ -158,6 +161,7 @@
 				s[7].className = 'storylinenext2';
 				break;
 			case 8:
+			    showMessage("Pass to Player 1");
 			    s[7].value = story[7];
 			    s[5].className = 'storylinehidden';
 				s[6].className = 'storylinehidden';
