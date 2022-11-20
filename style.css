@@ -1,11 +1,9 @@
 body {
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     background-color: white;
-	max-width: 480px;
 	width: device-width;
+	max-width: 480px;
 	margin: auto;
-	padding-left: 4px;
-	padding-right: 4px;
 }
 
 h1 {
