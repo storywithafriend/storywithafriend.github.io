@@ -29,9 +29,9 @@
 		<table class="display-title">
 			<tbody>
             <tr>
-				<td><i class="fa fa-question-circle" style="font-size:32px;color:#cccccc" id="help-button"></i></td>
+				<td>&nbsp;<i class="fa fa-question-circle" style="font-size:32px;color:#cccccc" id="help-button"></i></td>
 		        <td><h1>Story With A Friend</h1></td>
-		        <td><i class="fa fa-gear" style="font-size:32px;color:#cccccc" id="settings-button"></i></td>
+		        <td><i class="fa fa-gear" style="font-size:32px;color:#cccccc" id="settings-button"></i>&nbsp;</td>
             </tr>
             </tbody>
         </table>
@@ -78,6 +78,17 @@
             </tbody>
         </table>
         </div>
+
+		<div class="row">
+		  <div class="column">
+			  <button class="my-botton" type="button" id="new-button">New Game <i class="fa fa-refresh"</i></i></button>
+		  </div>
+		  <div class="column">
+			  <button class="my-botton" type="button" id="share-button">Share <i class="fa fa-share-alt"</i></i></button>
+		  </div>
+		</div>
+
+		<div id="snackbar"></div>
 		
         <!-- Help Screen -->       
         <div id="help-screen" class="modal">
@@ -95,6 +106,7 @@
           </div>
         </div>
 
+        <script src="html2canvas.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="main.js"></script>
 

@@ -3,8 +3,13 @@
 
     var helpButton = document.getElementById("help-button");
     var settingsButton = document.getElementById("settings-button");
+    var newButton = document.getElementById("new-button");
+    var shareButton = document.getElementById("share-button");
+    
     var helpScreen = document.getElementById("help-screen");
     var settingsScreen = document.getElementById("settings-screen");  
+    
+    var snackbar = document.getElementById("snackbar");
     
     var prompt = document.getElementById("prompt");
     
@@ -35,6 +40,7 @@
 		var i;
 		for (i = 0; i < 10; i++) story[i] = "";
 		showStory();	
+		updateGameState();
 	}
 	
 	function showStory() {	
@@ -67,6 +73,13 @@
 		clearStory();
 		updateGameState();
 	}
+
+	function showMessage(msg) {
+		snackbar.className = "show";
+		snackbar.innerHTML = msg;
+		setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+	}
+
 
 	
 	/** Main Game Logic
@@ -168,8 +181,21 @@
 		//if(newgame) startnew();
 		
 	}
-    
-    
+
+	function takeScreenShot(){
+		html2canvas(document.getElementById("story"), {scrollY: -window.scrollY}).then(function(canvas) {
+			canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]).then(
+				() => {
+				/* success */
+				showMessage("Copied to clipboard..");
+				},
+				() => {
+				/* failure */
+				showMessage("Copy to clipboard failed..");
+				}
+			))
+		});
+	}  
 
     // Listen for enter in Input line
     var i;
@@ -188,11 +214,11 @@
 		}
 	});
 
-    // Reveal Stories
-    //revealButton.addEventListener('click', reveal);
+    // Share screenshot button
+    shareButton.addEventListener('click', takeScreenShot);
     
-    // New Game
-    //newgameButton.addEventListener('click', readyfornew);
+    // New Game button
+    newButton.addEventListener('click', clearStory);
     
     clearStory();
     updateGameState();
