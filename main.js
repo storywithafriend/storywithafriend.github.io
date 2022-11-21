@@ -98,12 +98,16 @@
 			s[i].placeholder="";
 		}
 
-		if (line < 10)	{
+		if (line < 11)	{
 			var i;
 			for (i = 0; i < 10; i++) s[i].value="";
+		}
+			
+		if (line < 10)	{	
 			s[line].disabled=false; 
 			s[line].focus();
 			s[line].placeholder="Player "+player+", write the next line of the story ...";
+			if(line==0) s[line].placeholder="Player "+player+", write the first line of the story ...";
 		}
 		
 		switch (line) {
@@ -176,36 +180,40 @@
 				s[9].className = 'storylinenext1';
 				break;
 			case 10:
+			    s[7].className = 'storylinehidden';
+			    s[8].className = 'storylinehidden';
+			    s[9].className = 'storylinehidden';
+			    shareButton.innerHTML = "Reveal Story";
+			    shareButton.style.visibility = 'visible';
+			    break;
+			case 11:
 				reveal();
-				newButton.style.visibility = 'visible';
+				shareButton.innerHTML = "Share <i class='fa fa-share-alt'></i>";
 				shareButton.style.visibility = 'visible';
+				newButton.style.visibility = 'visible';
 				break;
 		};
-			
 
-		//revealButton.className = 'hidden';
-		//if (line==11) revealButton.className = 'visible';
-		
-		//newgameButton.className = 'hidden';
-		//if (line==12) newgameButton.className = 'visible';
-		
-		//if(newgame) startnew();
-		
 	}
 
 	function takeScreenShot(){
-		html2canvas(document.getElementById("story"), {scrollY: -window.scrollY}).then(function(canvas) {
-			canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]).then(
-				() => {
-				/* success */
-				showMessage("Copied to clipboard..");
-				},
-				() => {
-				/* failure */
-				showMessage("Copy to clipboard failed..");
-				}
-			))
-		});
+		if(line==10) {
+			line++;
+			updateGameState();
+		} else {
+		    html2canvas(document.getElementById("story"), {scrollY: -window.scrollY}).then(function(canvas) {
+		    	canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]).then(
+		    		() => {
+		    		/* success */
+		    		showMessage("Copied to clipboard..");
+		    		},
+		    		() => {
+		    		/* failure */
+		    		showMessage("Copy to clipboard failed..");
+		    		}
+		    	))
+		    });
+	    }
 	}  
 
     // Listen for enter in Input line
