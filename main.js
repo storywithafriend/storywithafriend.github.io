@@ -10,6 +10,7 @@
     var settingsScreen = document.getElementById("settings-screen");  
     
     var helpClose = document.getElementById("help-close");
+    var settingsClose = document.getElementById("settings-close");
     
     var snackbar = document.getElementById("snackbar");
     
@@ -81,7 +82,6 @@
 		snackbar.innerHTML = msg;
 		setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 1500);
 	}
-
 
 	
 	/** Main Game Logic
@@ -239,6 +239,14 @@
     }
     helpClose.onclick = function() {
       helpScreen.style.display = "none";
+    }
+    
+    // settings help
+    settingsButton.onclick = function() {
+      settingsScreen.style.display = "block";
+    }
+    settingsClose.onclick = function() {
+      settingsScreen.style.display = "none";
     }
 
     // Share screenshot button
