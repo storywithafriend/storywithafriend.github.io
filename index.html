@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-T04TFGTLCX"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'G-T04TFGTLCX');
+		</script>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
@@ -32,7 +42,7 @@
             <tr>
 				<td>&nbsp;<i class="fa fa-question-circle" style="font-size:32px;color:#cccccc" id="help-button"></i></td>
 		        <td><h1>Story With A Friend</h1></td>
-		        <td><i class="fa fa-gear" style="font-size:32px;color:#cccccc" id="settings-button"></i>&nbsp;</td>
+		        <td><i class="fa fa-info-circle" style="font-size:32px;color:#cccccc" id="info-button"></i>&nbsp;</td>
             </tr>
             </tbody>
         </table>
@@ -105,14 +115,19 @@
 				<li>You only get to see your partner's last line!</li>
 				<li>Reveal at the end to see your funny creation</li>
 			</ul>
+			<hr>
+			<p>Tips:</p>
+			<ul>
+				<li>This game is played by 2 friends in a room on a single device. Write 2 stories at a time, passing back-and-forth 2 phones</li>
+			</ul>
           </div>
         </div>
         
-        <!-- Settings Screen -->  
-        <div id="settings-screen" class="modal">
+        <!-- Info Screen -->  
+        <div id="info-screen" class="modal">
           <div class="modal-content">
-            <span class="close" id="settings-close">&times;</span>
-            <hr>
+            <span class="close" id="info-close">&times;</span>
+            <h2>Info</h2>
             <p>I made this game for my wife so we can be creative and write silly stories together. It's based on a game I played with pencil and paper as a kid. </p>
             <hr>
             <p><a href="https://github.com/storywithafriend/storywithafriend.github.io">source code</a></p>
@@ -121,7 +136,6 @@
             <div>
 			<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="philipmocz" data-color="#40DCA5" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 			</div>
-            <hr>
           </div>
         </div>
 

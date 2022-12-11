@@ -2,15 +2,15 @@
 (function () {
 
     var helpButton = document.getElementById("help-button");
-    var settingsButton = document.getElementById("settings-button");
+    var infoButton = document.getElementById("info-button");
     var newButton = document.getElementById("new-button");
     var shareButton = document.getElementById("share-button");
     
     var helpScreen = document.getElementById("help-screen");
-    var settingsScreen = document.getElementById("settings-screen");  
+    var infoScreen = document.getElementById("info-screen");  
     
     var helpClose = document.getElementById("help-close");
-    var settingsClose = document.getElementById("settings-close");
+    var infoClose = document.getElementById("info-close");
     
     var snackbar = document.getElementById("snackbar");
     
@@ -241,12 +241,12 @@
       helpScreen.style.display = "none";
     }
     
-    // settings help
-    settingsButton.onclick = function() {
-      settingsScreen.style.display = "block";
+    // open/close info
+    infoButton.onclick = function() {
+      infoScreen.style.display = "block";
     }
-    settingsClose.onclick = function() {
-      settingsScreen.style.display = "none";
+    infoClose.onclick = function() {
+      infoScreen.style.display = "none";
     }
 
     // Share screenshot button
