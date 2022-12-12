@@ -293,7 +293,7 @@ const prompts = [
 			updateGameState();
 		} else {
 			// copy the full story to the clipboard
-			var fullStory = "Story with a Friend: https://storywithafriend.github.io";
+			var fullStory = "Story with a Friend (https://storywithafriend.github.io)";
 			fullStory = fullStory + "\n\uD83D\uDFE9" + story[0]
 			fullStory = fullStory + "\n\uD83D\uDFE9" + story[1]
 			fullStory = fullStory + "\n\uD83D\uDFE6" + story[2]
