@@ -35,6 +35,7 @@ const prompts = [
 "A young couple falls in love while traveling the world together.",
 "A group of astronauts discovers that their spaceship is actually a giant hamster wheel.", 
 "A goldfish becomes the star of a popular cooking show.", 
+"A group of mischievous squirrels that steal food from a picnic and end up starting a food fight",
 "A group of mischievous monkeys takes over a luxury resort.", 
 "A couple's relationship is challenged by the arrival of a third person who threatens to come between them.",
 "A group of penguins tries to break the world record for the largest game of limbo.",
@@ -76,6 +77,14 @@ const prompts = [
 "A group of friends discovers a hidden door in their apartment that leads to a magical world.",
 "A group of superheroes accidentally becomes a boy band and becomes more famous for their singing than their crime-fighting.",
 "A group of friends starts a business selling personalized dream experiences.",
+"A talking, magical pencil that helps a student ace their exams",
+"A group of friends who discover a portal to another dimension in their backyard",
+"A penguin who dreams of becoming a ballerina",
+"A group of ghosts that haunt a luxury hotel",
+"A group of animals that band together to create their own theme park",
+"A group of aliens who crash land on Earth and have to figure out how to get back to their home planet",
+"A group of superheroes who accidentally get turned into babies and have to figure out how to save the day in their miniature forms",
+"A group of talking fruit that go on a road trip across the country",
 "A talking dog becomes a famous news anchor.",
 "A group of aliens tries to learn human behavior by joining a high school sports team.",
 "A group of friends accidentally gets trapped in a video game and has to defeat the final boss to escape.",
@@ -84,6 +93,12 @@ const prompts = [
 "A chicken and a penguin become roommates and start a detective agency.", 
 "A group of friends navigates the challenges of living in a small apartment in the city.",
 "A family struggles to deal with the eccentric personalities of their extended family members.",
+"A clumsy superhero who accidentally saves the day by tripping and accidentally defeating the villain",
+"A group of dogs that open a detective agency to solve crimes in their neighborhood",
+"A robot that gains sentience and decides to become a stand-up comedian",
+"A family of dinosaurs that go on vacation to the beach and have all sorts of wacky adventures",
+"A talking tree that gives advice to anyone who asks",
+"A group of characters who get stuck in a board game and have to find a way to win to get out",
 ];
 
 
@@ -147,7 +162,7 @@ const prompts = [
 		const date = new Date();
 		const day = date.getDate();
 		const month = date.getMonth();
-		let idx = (month*31 + day) % 85;
+		let idx = (month*31 + day) % 100;
 		prompt.innerHTML = "Today's prompt: "+ prompts[idx];
 	}
 	
