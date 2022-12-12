@@ -292,18 +292,28 @@ const prompts = [
 			line++;
 			updateGameState();
 		} else {
-		    html2canvas(document.getElementById("story"), {scrollY: -window.scrollY}).then(function(canvas) {
-		    	canvas.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]).then(
-		    		() => {
-		    		/* success */
-		    		showMessage("Copied to clipboard..");
-		    		},
-		    		() => {
-		    		/* failure */
-		    		showMessage("Copy to clipboard failed..");
-		    		}
-		    	))
-		    });
+			// copy the full story to the clipboard
+			var fullStory = "Story with a Friend: https://storywithafriend.github.io";
+			fullStory = fullStory + "\n\uD83D\uDFE9" + story[0]
+			fullStory = fullStory + "\n\uD83D\uDFE9" + story[1]
+			fullStory = fullStory + "\n\uD83D\uDFE6" + story[2]
+			fullStory = fullStory + "\n\uD83D\uDFE6" + story[3]
+			fullStory = fullStory + "\n\uD83D\uDFE9" + story[4]
+			fullStory = fullStory + "\n\uD83D\uDFE9" + story[5]
+			fullStory = fullStory + "\n\uD83D\uDFE6" + story[6]
+			fullStory = fullStory + "\n\uD83D\uDFE6" + story[7]
+			fullStory = fullStory + "\n\uD83D\uDFE9" + story[8]
+			fullStory = fullStory + "\n\uD83D\uDFE9" + story[9]
+			navigator.clipboard.writeText(fullStory).then(
+		    	() => {
+		    	/* success */
+		    	showMessage("Copied story to clipboard..");
+		    	},
+		    	() => {
+		    	/* failure */
+		    	showMessage("Copy to clipboard failed..");
+		    	}
+		    );
 	    }
 	}  
 
